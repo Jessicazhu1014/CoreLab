@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    main {
+      text-align: center;
+      display: flex;
+      justify-content: space-evenly;
+      margin-top: 50px; 
+    }
+
+    main img {
+      width: 47.5vh;
+      height: 75vh;
+    }
+
+    .book {
+      perspective: 1000px;
+      position: relative;
+    }
+
+    .cover {
+      z-index: 100;
+      position: absolute;
+      transform-origin: left;
+      transform-style: preserve-3d;
+      transition: all .8s ease;
+    }
+
+    .bottom {
+      position: relative;
+      z-index: 1;
+    }
+
+    .book:hover .cover {
+      transform: rotateY(-100deg);
+    }
+
+    header {
+      text-align: center;
+      border-bottom: dashed 2px #ceb46a;
+      margin-bottom: 10px;
+      padding: 10px;
+    }
+
+    header a {
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+
+    header a:hover {
+      transform: scale(1.2);
+    }
+
+    header img {
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="index.html"><img src="images/small-1.png"></a>
+    <a href="fish.html"><img src="images/small-2.png"></a>
+    <a href="book.html"><img src="images/small-3.png"></a>
+    <a href="water.html"><img src="images/small-4.png"></a>
+    <a href="page4.html"><img src="images/small-5.png"></a>
+    <a href="page5.html"><img src="images/small-6.png"></a>
+  </header>
+
+  <main>
+    <div class="book">
+      <img class="cover" src="images/book-cover.jpeg">
+      <img class="bottom" src="images/book1.jpg">
+    </div>
+
+    <div class="book">
+      <img class="cover" src="images/book-cover.jpeg">
+      <img class="bottom" src="images/book2.jpg">
+    </div>
+
+    <div class="book">
+      <img class="cover" src="images/book-cover.jpeg">
+      <img class="bottom" src="images/book3.jpeg">
+    </div>
+  </main>
+</body>
+
+</html>
